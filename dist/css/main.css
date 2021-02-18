@@ -1,17 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  background-color: lightblue;
-  color: #037a03;
+  background-color: black;
+  color: white;
   text-align: center;
 }
 
-@media (max-width: 768px) {
-  body {
-    background-color: blue;
-  }
+#welcome-section, #about, #projects, #contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: lightgreen;
+  border: 2px solid black;
+}
+
+#navbar li a:hover, #navbar a:hover, .projects-div a:hover, #contact li a:hover {
+  background-color: #5fb3ce !important;
+  border-width: 4px !important;
+  -webkit-transition: 0.1 0.5s;
+  transition: 0.1 0.5s;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
 }
 
 #navbar {
-  background-color: lightcyan;
+  background-color: rgba(15, 143, 143, 0.5);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -19,23 +52,84 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  width: 100%;
+  letter-spacing: 1px;
+  height: 8vh;
+  z-index: 3;
+  border: black 2px solid;
 }
 
-#navbar .intro-class {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  margin: 15px;
-  width: 20vw;
-  background-color: greenyellow;
+#navbar .navbar-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+}
+
+#navbar .navbar-container .intro-class {
+  width: 30%;
   padding: 5px;
+  margin-right: 20px;
 }
 
-#navbar ul {
+#navbar .navbar-container .intro-class a {
+  padding: 5px;
+  background-color: greenyellow;
+  border-radius: 5px;
+  border: black 2px solid;
+}
+
+#navbar .navbar-container ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+#navbar .navbar-container ul li {
+  padding: 5px;
+  margin-right: 50px;
+}
+
+#navbar .navbar-container ul li a {
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 5px 10px;
+  background-color: #ff7301;
+  color: white;
+}
+
+#main {
+  width: 100%;
+}
+
+#main .container {
+  background-color: #43a2c2;
+  color: white;
+  width: 900px;
+}
+
+#main p {
+  color: black;
+}
+
+#main #welcome-section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -43,40 +137,211 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  width: 70vw;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -ms-flex-line-pack: distribute;
-      align-content: space-around;
-  border: 5xp solid black;
-  list-style: none;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  background-color: #ff7301;
-}
-
-#navbar ul li {
-  padding: 5px;
-  margin-right: 100px;
-}
-
-#main {
-  margin-top: 20vh;
-}
-
-#main #welcome-section {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   text-align: center;
   height: 100%;
+  position: relative;
+  height: 100vh;
+  background-color: #FFB600;
+  height: 100vh;
+  background: url("https://res.cloudinary.com/vezaliy/image/upload/v1613565778/FCC/Portfolio/ilya-pavlov-OqtafYT5kTw-unsplash_bdndpl.jpg") round;
 }
 
-#main p {
-  color: yellow;
+#main #welcome-section .welcome-section-container {
+  display: inline-block;
+  margin-left: 200px;
 }
 
-#main .pj-div {
+#main #welcome-section .welcome-section-container h1 {
+  margin: 0;
+  font-size: 500%;
+  letter-spacing: 4px;
+  text-shadow: 5px 1px 1px #464440;
+  text-align: left;
+}
+
+#main #welcome-section .welcome-section-container h1 span {
+  color: chartreuse;
+}
+
+#main #welcome-section .welcome-section-container ul {
+  font-size: 200%;
+  text-align: left;
+}
+
+#main #welcome-section .welcome-section-container ul a {
+  text-decoration: none;
+  color: white;
+}
+
+#main #welcome-section .welcome-section-container ul a:hover {
+  margin-bottom: 5px;
+  -webkit-text-decoration: underline black;
+          text-decoration: underline black;
+}
+
+#main #about {
+  background-color: #276478;
+}
+
+#main #about .heading {
+  margin-bottom: -25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 2;
+}
+
+#main #about .heading .title {
+  color: white !important;
+  bottom: 1px;
+  position: absolute;
+  background: #727171;
+  padding: 5px 15px 5px 15px;
+  font-size: 2vmax;
+  width: 15vmax;
+  text-align: center;
+}
+
+#main #about .heading #img {
+  background: url("https://res.cloudinary.com/vezaliy/image/upload/v1613500906/FCC/Portfolio/marx_icon_ckbwm3.png") no-repeat center 45%;
+  background-size: 120% auto;
+  background-color: blueviolet;
+  width: 12vmax;
+  height: 12vmax;
+  border-radius: 12vmax;
+  border: 5px solid black;
+}
+
+#main #about .container {
+  padding: 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: left;
+  border-radius: 20px;
+  border: 5px solid black;
+}
+
+#main #about .container .left {
+  text-align: center;
+  margin: 10px 0;
+}
+
+#main #about ul {
+  list-style: circle !important;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -webkit-column-gap: 15px;
+          column-gap: 15px;
+  text-align: left;
+  margin: 10px;
+}
+
+#main #about ul li {
+  list-style: square;
+  margin-left: 100px;
+  padding: 5px;
+}
+
+#main #projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 2px solid black;
+}
+
+#main #projects h2 {
+  margin-bottom: 40px;
+  font-size: 3vmax;
+}
+
+#main #projects .projects {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  row-gap: 20px;
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
+  width: 1000px;
+  height: auto;
+}
+
+#main #projects .projects .projects-div {
+  background-color: greenyellow;
   margin: 5px;
   background-color: grey;
   border: 4px solid black;
+  padding: 10px;
+  margin: 20px;
+  -webkit-box-shadow: 0 0 20px -7px black;
+          box-shadow: 0 0 20px -7px black;
+  height: auto;
+}
+
+#main #projects .projects .projects-div a {
+  border: 2px solid black;
+}
+
+#main #contact {
+  background-color: #1a1a1a;
+  height: 50vh;
+  padding: 5em 1.5em;
+}
+
+#main #contact .container {
+  background-color: #1a1a1a;
+}
+
+#main #contact h2 {
+  background: #1a1a1a;
+  margin-bottom: 2em;
+  font-size: 200%;
+}
+
+#main #contact .contact-list {
+  display: -ms-grid;
+  display: grid;
+  row-gap: 40px;
+  -webkit-column-gap: 100px;
+          column-gap: 100px;
+  background: #ff7301;
+  -ms-grid-columns: (1fr)[auto-fit];
+      grid-template-columns: repeat(auto-fit, 1fr);
+  background: #1a1a1a;
+}
+
+#main #contact .contact-list .github img {
+  width: 150px;
+  height: 7vh;
+}
+
+#main #contact .contact-list .fcc img {
+  max-width: 250px;
+}
+
+#main #contact .contact-list-item img {
+  max-width: 100%;
+  height: 5vh;
+}
+
+@media (max-width: 768px) {
+  body {
+    background-color: #58a4b0;
+  }
 }
 /*# sourceMappingURL=main.css.map */

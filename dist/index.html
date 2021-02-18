@@ -9,40 +9,50 @@
 </head>
 <body>
     <nav id="navbar"> 
-        <header class="intro-class"><a href="#welcome-section"> Intro</a></header>
+        <!-- wrap in div, propably -->
+        <div class="navbar-container">
+            <header class="intro-class"><a href="#welcome-section"> Intro</a></header>
         
         <ul> 
-            <a href="#about"> <li> About </li></a>
-            <a href="#projects"> <li> Projects</li></a>
-            <a href="#contact"> <li> Contact me </li></a>
-        </ul>
+            <li> <a href="#about">  About </a></li>
+            <li> <a href="#projects">  Projects</a></li>
+            <li><a href="#contact">  Contact me </a></li>
+        </ul> </div>
+        
     </nav>
     <main id="main">
         <section id="welcome-section">
-            
-            <h1>vezariy</h1>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas placeat corporis accusamus corrupti, ullam veniam? Perferendis iure libero, odio suscipit laborum dolor, repellendus ut omnis optio, non quod quibusdam. Unde? </p>
+            <div class="welcome-section-container">
+            <h1>Hi<br>
+            I'm <span>Vezaliy</span></h1>
+            <ul class="welcome-section-list">
+                <li class="welcome-section-list-item">FreeCodeCamp</li>
+                <li class="welcome-section-list-item">GitHub</li>
+                <a href="#contact" class="welcome-btn">Contact me</a>
+            </ul>
+        </div>
         </section>
         <section id="about"> 
             <div class="heading">
                 <div id="img"></div>
-                <div class="title">I'm vezariy</div>
+                <!-- <img src="images/marx_icon.png" alt="avatar"> -->
+                <!-- <div class="title">I'm vezariy</div> -->
             </div>
-            <article class="review">
+            <div class="about container">
                 <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis recusandae itaque id in fuga dolores soluta eum ab quaerat fugit! Neque, repellat amet! Iure libero deleniti reiciendis fugit nisi cum.</p>
             
-                <p>Technical skills</p>
+                <p class="left">Technical skills</p>
                 <ul class="skill-list">
-                    <li>text</li>
-                    <li>text</li>
-                    <li>text</li>
+                    <li>Html</li>
+                    <li>Css</li>
+                    <li>Css Grid/FlexBox</li>
                     <li>text</li>
                     <li>text</li>
                     <li>text</li>
                     <li>text</li>
                     <li>text</li>
                 </ul>
-                <p>Soft Skills</p>
+                <p class="left">Soft Skills</p>
                 <ul class="soft-skills">
                     <li>text2</li>
                     <li>text2</li>
@@ -51,51 +61,60 @@
                     <li>text2</li>
                     <li>text2</li>
             </ul>
-            </article>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit quam reprehenderit numquam aut et excepturi neque tempora voluptate rerum veniam iste modi delectus consequuntur perspiciatis blanditiis nemo, sint iure nostrum!</p>
+            </div>
+            
         
         </section>
         <section id="projects"> 
             <h2>Some of my projects</h2>
-            <div class="container">
-                <div class="pj-div first">
-                    <a href="#" target="_blank"> Link to project
-                        <span class="pj-image">smt</span>
-                        <p>Tribute Page</p>
+            <div class="projects container"> <!-- Need to set class project-tile!!! -->
+                <div class="projects-div first"> 
+                    <a href="https://codepen.io/vezaliy/details/GRorbOa" target="_blank">
+                        <img src="images/marx_icon.png" width="100px" height="100px" alt="link">
+                        <!-- <span class="project-image">smt</span> -->
+                        <h3>Tribute Page</h3>
                     </a> 
                 </div>
 
-                <div class="pj-div second">
-                    <a href="#" target="_blank"> Link to project 
-                        <span class="pj-image">smt</span>
-                        <p>Tribute Page</p>
+                <div class="projects-div second">
+                    <a href="https://codepen.io/vezaliy/details/vYLxNjP" target="_blank"> 
+                        <img src="images/marx_icon.png" width="100px" height="100px" alt="link">
+                        <!-- <span class="project-image">smt</span> -->
+                        <h3>Survey Form</h3>
                     </a> 
                 </div>
 
-                <div class="pj-div third">
-                    <a href="#" target="_blank"> Link to project 
-                        <span class="pj-image">smt</span>
-                        <p>Tribute Page</p>
+                <div class="projects-div third">
+                    <a href="https://codepen.io/vezaliy/pen/wvMgmxM" target="_blank">  
+                        <img src="images/marx_icon.png" width="100px" height="100px" alt="link">
+                        <!-- <span class="project-image">smt</span> -->
+                        <h3>Landing Page</h3>
                     </a> 
                 </div>
-                <div class="pj-div third">
-                    <a href="#" target="_blank"> Link to project 
-                        <span class="pj-image">smt</span>
-                        <p>Tribute Page</p>
+                <div class="projects-div forth">
+                    <a href="https://codepen.io/vezaliy/pen/PobPJag" target="_blank"> 
+                        <img src="images/marx_icon.png" width="100px" height="100px" alt="link">
+                        <!-- <span class="project-image">smt</span> -->
+                        <h3>Technical Documentation Page</h3>
                     </a> 
                 </div>
             </div>
             <p class="project-tile"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas placeat corporis accusamus corrupti, ullam veniam? Perferendis iure libero, odio suscipit laborum dolor, repellendus ut omnis optio, non quod quibusdam. Unde? </p>
         </section>
         <section id="contact">
+           <div class="contact container">
+            <h2>My social bla bla</h2>
             <ul class="contact-list">
-                <li class="contact-list-item"><a href="#"  target="_blank" class="contact-link"> <img src="" alt="GitHub"> github</a></li>
-                <li class="contact-list-item"><a href="#"  target="_blank" class="contact-link"> <img src="" alt="FreeCodeCamp"> freecodecamp</a></li>
-                <li class="contact-list-item"><a href="#"  target="_blank" class="contact-link"> <img src="" alt="LinkedIn"> linkedin</a></li>
+                <li class="contact-list-item github"><a href="#"  target="_blank" class="contact-link"> <img src="https://res.cloudinary.com/vezaliy/image/upload/v1613586374/FCC/Portfolio/github_rukslh.png" alt="GitHub"  > </a></li>
+                <li class="contact-list-item fcc"><a href="#"  target="_blank" class="contact-link"> <img src="https://res.cloudinary.com/vezaliy/image/upload/v1613586376/FCC/Portfolio/fcc_iyhtf9.png" alt="FreeCodeCamp" > </a></li>
+                <li class="contact-list-item linkedin"><a href="#"  target="_blank" class="contact-link"> <img src="https://res.cloudinary.com/vezaliy/image/upload/v1613586375/FCC/Portfolio/linkedin_yujlqe.png" alt="LinkedIn" > </a></li>
+                <li class="contact-list-item codepen"><a href="#"  target="_blank" class="contact-link"> <img src="https://res.cloudinary.com/vezaliy/image/upload/v1613586374/FCC/Portfolio/codepen_nuzpxb.png" alt="CodePen" > </a></li>
             </ul>
             <!-- rel="noopener"
             rel="noopener"
             rel="noopener" -->
+        </div>
         </section>
     </main>
     <footer id="footer">
