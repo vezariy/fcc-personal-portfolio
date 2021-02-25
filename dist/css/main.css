@@ -40,10 +40,10 @@ body {
   border-radius: 5px;
   border: black 2px solid;
   color: white;
-  padding: 5px;
+  padding: 8px;
   font-size: 16px;
-  -webkit-transition: all 500ms ease-out;
-  transition: all 500ms ease-out;
+  -webkit-transition: all 250ms ease-out;
+  transition: all 250ms ease-out;
 }
 
 #navbar a:hover, #navbar li a:hover, .projects-div a:hover, #contact li a:hover {
@@ -51,8 +51,8 @@ body {
   border-width: 2px;
   background-color: #86c5da;
   color: white;
-  -webkit-transition: all 500ms ease-out;
-  transition: all 500ms ease-out;
+  -webkit-transition: all 250ms ease-out;
+  transition: all 250ms ease-out;
   font-size: 17px;
 }
 
@@ -100,18 +100,19 @@ h2, h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
   padding: 15px;
+  margin: 0 10em;
 }
 
 #navbar .navbar-container .intro-class {
-  width: 30%;
+  width: 40%;
   padding: 5px;
   margin-right: 20px;
 }
@@ -120,7 +121,7 @@ h2, h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 80%;
+  width: 100%;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
@@ -132,7 +133,7 @@ h2, h3 {
 
 #navbar .navbar-container ul li {
   padding: 5px;
-  margin-right: 50px;
+  margin-right: 70px;
 }
 
 #main {
@@ -156,14 +157,14 @@ h2, h3 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  text-align: center;
+  text-align: left;
   position: relative;
   height: 100vh;
   background-color: #FFB600;
   background: url("https://res.cloudinary.com/vezaliy/image/upload/v1613565778/FCC/Portfolio/ilya-pavlov-OqtafYT5kTw-unsplash_bdndpl.jpg") round;
 }
 
-#main .welcome-section .welcome-section-container {
+#main .welcome-section-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -174,25 +175,30 @@ h2, h3 {
   line-height: 1.1;
 }
 
-#main .welcome-section .welcome-section-container h1 {
+#main .welcome-section-container h1 {
   margin: 0;
-  font-size: 500%;
+  font-size: 6rem;
   letter-spacing: 4px;
   text-shadow: 5px 1px 1px #464440;
-  text-align: left;
+  text-align: center;
 }
 
-#main .welcome-section .welcome-section-container h1 span {
+#main .welcome-section-container h1 span {
   color: lightblue;
 }
 
-#main .welcome-section .welcome-section-container ul {
+#main .welcome-section-container-list {
   margin-top: 1.1rem;
   font-size: 200%;
-  text-align: left;
+  text-align: center;
 }
 
-#main .welcome-section .welcome-section-container ul .welcome-btn {
+#main .welcome-section-container-list-button {
+  margin-top: 10px;
+  margin-top: 1.5rem;
+}
+
+#main .welcome-section-container-list .welcome-btn {
   color: black;
   margin-top: 1.5rem;
   background-color: lightblue;
@@ -200,20 +206,23 @@ h2, h3 {
   width: -moz-max-content;
   width: max-content;
   padding: 10px 15px;
-  font-size: 50%;
+  font-size: 70%;
   border: black 3px solid;
   border-radius: 10px;
-  -webkit-transition: all 500ms ease-out;
-  transition: all 500ms ease-out;
+  -webkit-transition: all 250ms ease-out;
+  transition: all 250ms ease-out;
 }
 
-#main .welcome-section .welcome-section-container ul .welcome-btn:hover {
-  background-color: #3a9fc0;
-  color: white;
+#main .welcome-section-container-list .welcome-btn:hover {
   -webkit-transform: translateY(4px);
           transform: translateY(4px);
-  -webkit-transition: all 500ms ease-out;
-  transition: all 500ms ease-out;
+  position: relative;
+  border-width: 2px;
+  background-color: #86c5da;
+  color: white;
+  -webkit-transition: all 250ms ease-out;
+  transition: all 250ms ease-out;
+  font-size: 100%;
 }
 
 #main #about {
@@ -229,26 +238,27 @@ h2, h3 {
       -ms-flex-pack: center;
           justify-content: center;
   z-index: 2;
+  position: relative;
 }
 
 #main #about .heading .title {
-  color: white !important;
-  bottom: 1px;
+  color: black;
+  bottom: 10px;
   position: absolute;
-  background: #727171;
-  padding: 5px 15px 5px 15px;
-  font-size: 2vmax;
-  width: 15vmax;
+  background: rgba(95, 179, 206, 0.7);
+  padding: 3px 15px 3px 15px;
+  font-size: 2rem;
+  width: 15rem;
   text-align: center;
+  line-height: 1em;
 }
 
 #main #about .heading #img {
   background: url("https://res.cloudinary.com/vezaliy/image/upload/v1613500906/FCC/Portfolio/marx_icon_ckbwm3.png") no-repeat center 45%;
   background-size: 120% auto;
-  background-color: blueviolet;
-  width: 12vmax;
-  height: 12vmax;
-  border-radius: 12vmax;
+  width: 12rem;
+  height: 12rem;
+  border-radius: 12rem;
   border: 5px solid black;
 }
 
@@ -259,6 +269,8 @@ h2, h3 {
   text-align: left;
   border-radius: 20px;
   border: 5px solid black;
+  width: 70%;
+  height: 60%;
 }
 
 #main #about .container .left {
@@ -306,30 +318,87 @@ h2, h3 {
 #main #projects .projects {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(150px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  -ms-grid-columns: (minmax(20em, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
   row-gap: 20px;
   -webkit-column-gap: 30px;
           column-gap: 30px;
-  width: 1000px;
+  width: 1000;
   height: auto;
 }
 
 #main #projects .projects-div {
-  background-color: greenyellow;
-  margin: 5px;
-  background-color: grey;
   border: 4px solid black;
   padding: 10px;
   margin: 20px;
-  -webkit-box-shadow: 0 0 20px -7px black;
-          box-shadow: 0 0 20px -7px black;
   height: auto;
+  width: auto;
 }
 
 #main #projects .projects-div a {
+  position: relative;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 10px;
+  -webkit-transition: all 250ms ease-out;
+  transition: all 250ms ease-out;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: lightgreen;
   border: 2px solid black;
+}
+
+#main #projects .projects-div a:hover {
+  background-color: red;
+}
+
+#main #projects .projects-div a img {
+  width: auto;
   height: 100px;
+  opacity: 1;
+  border: 1px solid black;
+  max-width: 25rem;
+  min-height: 100%;
+}
+
+#main #projects .projects-div-overlay {
+  opacity: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+#main #projects .projects-div-overlay:hover {
+  opacity: 1;
 }
 
 #main #contact {
@@ -375,15 +444,12 @@ h2, h3 {
 }
 
 #main #contact .contact-list .contact-list-item::after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
+  top: 0;
   height: 3px;
   content: "";
-  background-color: lightblue;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
+  background-color: #58a4b0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 @media (max-width: 768px) {
