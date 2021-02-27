@@ -6,13 +6,15 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
 }
 
 body {
   background-color: black;
   color: white;
   text-align: center;
+  font-family: sans-serif;
+  font-size: 1rem;
 }
 
 #welcome-section, #about, #projects, #contact {
@@ -30,13 +32,13 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: lightgreen;
+  background-color: #FFD55A;
   border: 2px solid black;
 }
 
 #navbar li a, #navbar a, .projects-div a, #contact li a {
   position: relative;
-  background-color: #ff7301;
+  background-color: #6DD47E;
   border-radius: 5px;
   border: black 2px solid;
   color: white;
@@ -49,8 +51,8 @@ body {
 #navbar a:hover, #navbar li a:hover, .projects-div a:hover, #contact li a:hover {
   position: relative;
   border-width: 2px;
-  background-color: #86c5da;
-  color: white;
+  background-color: #f3b500;
+  color: black;
   -webkit-transition: all 250ms ease-out;
   transition: all 250ms ease-out;
   font-size: 17px;
@@ -58,6 +60,7 @@ body {
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 li {
@@ -69,26 +72,22 @@ p {
 }
 
 h2, h3 {
-  color: lightblue;
+  color: #FFD55A;
   font-weight: 100;
 }
 
 #navbar {
-  background-color: rgba(34, 32, 32, 0.7);
+  background-color: rgba(0, 0, 0, 0.56);
+  color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
   width: 100%;
   letter-spacing: 1px;
   height: 6vh;
@@ -122,9 +121,8 @@ h2, h3 {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 #navbar .navbar-container ul .navbar-contact {
@@ -160,11 +158,11 @@ h2, h3 {
   text-align: left;
   position: relative;
   height: 100vh;
-  background-color: #FFB600;
   background: url("https://res.cloudinary.com/vezaliy/image/upload/v1613565778/FCC/Portfolio/ilya-pavlov-OqtafYT5kTw-unsplash_bdndpl.jpg") round;
 }
 
 #main .welcome-section-container {
+  padding: 0 15rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -184,7 +182,7 @@ h2, h3 {
 }
 
 #main .welcome-section-container h1 span {
-  color: lightblue;
+  color: #FFD55A;
 }
 
 #main .welcome-section-container-list {
@@ -201,7 +199,7 @@ h2, h3 {
 #main .welcome-section-container-list .welcome-btn {
   color: black;
   margin-top: 1.5rem;
-  background-color: lightblue;
+  background-color: #6DD47E;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -209,8 +207,8 @@ h2, h3 {
   font-size: 70%;
   border: black 3px solid;
   border-radius: 10px;
-  -webkit-transition: all 250ms ease-out;
-  transition: all 250ms ease-out;
+  -webkit-transition: all 500ms ease-out;
+  transition: all 500ms ease-out;
 }
 
 #main .welcome-section-container-list .welcome-btn:hover {
@@ -218,11 +216,11 @@ h2, h3 {
           transform: translateY(4px);
   position: relative;
   border-width: 2px;
-  background-color: #86c5da;
+  background-color: #32a946;
   color: white;
-  -webkit-transition: all 250ms ease-out;
-  transition: all 250ms ease-out;
-  font-size: 100%;
+  -webkit-transition: all 500ms ease-out;
+  transition: all 500ms ease-out;
+  font-size: 80%;
 }
 
 #main #about {
@@ -242,10 +240,10 @@ h2, h3 {
 }
 
 #main #about .heading .title {
-  color: black;
+  color: white;
   bottom: 10px;
   position: absolute;
-  background: rgba(95, 179, 206, 0.7);
+  background: rgba(109, 212, 126, 0.8);
   padding: 3px 15px 3px 15px;
   font-size: 2rem;
   width: 15rem;
@@ -253,8 +251,7 @@ h2, h3 {
   line-height: 1em;
 }
 
-#main #about .heading #img {
-  background: url("https://res.cloudinary.com/vezaliy/image/upload/v1613500906/FCC/Portfolio/marx_icon_ckbwm3.png") no-repeat center 45%;
+#main #about .heading img {
   background-size: 120% auto;
   width: 12rem;
   height: 12rem;
@@ -311,49 +308,76 @@ h2, h3 {
 }
 
 #main #projects h2 {
-  margin-bottom: 40px;
+  margin-bottom: 10px;
+  margin-top: 20px;
   font-size: 3vmax;
+  color: black;
 }
 
 #main #projects .projects {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(20em, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
-  row-gap: 20px;
-  -webkit-column-gap: 30px;
-          column-gap: 30px;
-  width: 1000;
-  height: auto;
-}
-
-#main #projects .projects-div {
-  border: 4px solid black;
-  padding: 10px;
-  margin: 20px;
-  height: auto;
-  width: auto;
-}
-
-#main #projects .projects-div a {
-  position: relative;
-  height: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  border-radius: 10px;
-  -webkit-transition: all 250ms ease-out;
-  transition: all 250ms ease-out;
+  -ms-grid-columns: (minmax(20rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  row-gap: 40px;
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
+  width: 1000;
+  height: auto;
+  border: 2px solid black;
+}
+
+#main #projects .projects .first a {
+  background: url(https://codepen.io/vezaliy/pen/GRorbOa/image/small.png) center;
+  background-size: 120%;
+}
+
+#main #projects .projects .second a {
+  background: url(https://codepen.io/vezaliy/pen/vYLxNjP/image/small.png) center;
+  background-size: 120%;
+}
+
+#main #projects .projects .third a {
+  background: url(https://codepen.io/vezaliy/pen/wvMgmxM/image/small.png) center;
+  background-size: 120%;
+}
+
+#main #projects .projects .forth a {
+  background: url(https://codepen.io/vezaliy/pen/PobPJag/image/small.png) center;
+  background-size: 120%;
+}
+
+#main #projects .projects-div {
+  margin: 20px;
+  height: 17rem;
+  width: 25rem;
+}
+
+#main #projects .projects-div a {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: lightgreen;
-  border: 2px solid black;
+  width: 100%;
+  border-radius: 15px;
+  -webkit-transition: all 250ms ease-out;
+  transition: all 250ms ease-out;
+  background: #43a2c2;
+  height: 17rem;
+  border: 5px solid black;
+  background: url(https://codepen.io/vezaliy/pen/GRorbOa/image/small.png);
+  background-size: 120%;
 }
 
 #main #projects .projects-div a:hover {
@@ -362,16 +386,15 @@ h2, h3 {
 
 #main #projects .projects-div a img {
   width: auto;
-  height: 100px;
+  height: 17rem;
   opacity: 1;
-  border: 1px solid black;
-  max-width: 25rem;
+  max-width: 20rem;
   min-height: 100%;
 }
 
 #main #projects .projects-div-overlay {
   opacity: 0;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 500;
   position: absolute;
   top: 0;
@@ -393,6 +416,7 @@ h2, h3 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  border-radius: 15px;
   -webkit-transition: all 250ms ease-in-out;
   transition: all 250ms ease-in-out;
 }
@@ -423,7 +447,7 @@ h2, h3 {
   row-gap: 40px;
   -webkit-column-gap: 100px;
           column-gap: 100px;
-  background: #ff7301;
+  background: #6DD47E;
   -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   background: #1a1a1a;
@@ -450,6 +474,15 @@ h2, h3 {
   background-color: #58a4b0;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+}
+
+footer {
+  background: #6DD47E;
+  color: #FFD55A;
+}
+
+footer a {
+  text-decoration: none;
 }
 
 @media (max-width: 768px) {
