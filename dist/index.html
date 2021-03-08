@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
-    <title>Document</title>
+    <link rel="icon" href="https://res.cloudinary.com/vezaliy/image/upload/v1615227035/FCC/Portfolio/favicon_jkzlsc.ico" type="image/x-icon">
+    <title>Personal Portfolio</title>
 </head>
 <body>
     <nav id="navbar"> 
-        <!-- wrap in div, propably -->
         <div class="navbar-container">
             <header class="intro-class"><a href="#welcome-section"> Intro</a></header>
         
@@ -24,23 +24,14 @@
     <main id="main">
         <section id="welcome-section" class="welcome-section">
             <div class="welcome-section-container">
-            <h1>Portfolio</h1>
-            <h1> Hi, I'm <span>Vezaliy</span></h1>
-            <!-- <ul class="welcome-section-container-list">
-                <li class="welcome-section-container-list-button"><a href="#contact" class="welcome-btn">Contact me</a></li>
-            </ul> -->
+            <h1> Hi,<br> I'm <span>Vezaliy</span></h1>
             <a href="#contact" class="welcome-btn">Contact me</a>
         </div>
         </section>
         <section id="about"> 
-            <!-- <div class="heading">
-                <img src="images/marx_icon.png" alt="avatar">
-                <p class="title">I'm vezariy</p>
-            </div> -->
             <div class="about container">
                 <div class="heading">
-                    <img src="images/marx_icon.png" alt="avatar">
-                    <!-- <p class="title">I'm vezariy</p> -->
+                    <img src="https://res.cloudinary.com/vezaliy/image/upload/v1613500906/FCC/Portfolio/marx_icon_ckbwm3.png" alt="avatar">
                 </div>
                 <p>Junior Web Developer specializing in front end development. Interested in all stages of the development cycle for dynamic web projects.</p>
                 
@@ -66,45 +57,40 @@
         
         </section>
         <section id="projects"> 
-            <h2>Some of my projects</h2>
-            <div class="projects container"> <!-- Need to set class project-tile!!! -->
+            <h2 class="project-tile">Some of my projects</h2>
+            <div class="projects container">
                 
-                <div class="projects-div project-tile first"> 
+                <div class="projects-div first"> 
                     <a  href="https://codepen.io/vezaliy/details/GRorbOa" target="_blank">
-                        <!-- <img src="https://codepen.io/vezaliy/pen/GRorbOa/image/small.png " alt="link" > -->
                     <div class="projects-div-overlay"> 
                             <h3>Tribute Page</h3> 
                     </div> 
                     </a> 
                 </div>
 
-                <div class="projects-div project-tile second">
+                <div class="projects-div second">
                     <a href="https://codepen.io/vezaliy/details/vYLxNjP" target="_blank"> 
-                        <!-- <img src="https://codepen.io/vezaliy/pen/vYLxNjP/image/small.png" alt="link"> -->
                         <div class="projects-div-overlay"> 
                             <h3>Survey Form</h3>  
                         </div> 
                     </a> 
                 </div>
 
-                <div class="projects-div project-tile third">
+                <div class="projects-div third">
                     <a href="https://codepen.io/vezaliy/pen/wvMgmxM" target="_blank">  
-                        <!-- <img src="https://codepen.io/vezaliy/pen/wvMgmxM/image/small.png" alt="link"> -->
                     <div class="projects-div-overlay">
                         <h3>Landing Page</h3>
                     </div>  
                     </a> 
                 </div>
-                <div class="projects-div project-tile forth">
+                <div class="projects-div forth">
                     <a href="https://codepen.io/vezaliy/pen/PobPJag" target="_blank"> 
-                        <!-- <img src="https://codepen.io/vezaliy/pen/PobPJag/image/small.png" alt="link"> -->
                     <div class="projects-div-overlay"> 
                         <h3>Technical Page</h3>
                     </div>  
                     </a> 
                 </div>
             </div>
-            <!-- <p class="project-tile"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas placeat corporis accusamus corrupti, ullam veniam? Perferendis iure libero, odio suscipit laborum dolor, repellendus ut omnis optio, non quod quibusdam. Unde? </p> -->
         </section>
         <section id="contact">
         <div class="contact container">
@@ -115,14 +101,50 @@
                 <li class="contact-list-item linkedin"><a id="profile-link" href="https://www.linkedin.com/in/vezariy/"  target="_blank" class="contact-link"> <img src="https://res.cloudinary.com/vezaliy/image/upload/v1613586375/FCC/Portfolio/linkedin_yujlqe.png" alt="LinkedIn" > </a></li>
                 <li class="contact-list-item codepen"><a id="profile-link" href="https://codepen.io/vezaliy"  target="_blank" class="contact-link"> <img src="https://res.cloudinary.com/vezaliy/image/upload/v1613586374/FCC/Portfolio/codepen_nuzpxb.png" alt="CodePen" > </a></li>
             </ul>
-            <!-- rel="noopener"
-            rel="noopener"
-            rel="noopener" -->
         </div>
         </section>
     </main>
     <footer id="footer">
-        <h4> &copy; Vezaliy </h4>
+        <h4> &copy; vezaliy </h4>
     </footer> 
+    <script src="js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          };
+        });
+      }
+    }
+  });
+</script>
 </body>
 </html>

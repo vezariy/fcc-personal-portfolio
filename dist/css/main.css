@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap");
 @media (max-width: 1120px) {
   body #navbar .navbar-container {
     -webkit-box-orient: horizontal;
@@ -28,10 +29,21 @@
   body #main .welcome-section-container h1 {
     font-size: 5rem;
   }
-  body #main .projects {
-    gap: 1rem;
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
+  body #main #about .container p, body #main #about .container li {
+    font-size: 1.8vmax;
+  }
+  body #main #about .container .heading {
+    margin-top: 0;
+  }
+  body #main #about .container .heading img {
+    margin-bottom: 0;
+  }
+  body #main #projects .projects {
+    width: 100%;
+  }
+  body #main #projects .projects-div a {
+    width: 23rem;
+    height: 16rem;
   }
 }
 
@@ -64,6 +76,9 @@
   body #navbar .navbar-container ul li {
     margin-left: 10px;
   }
+  body #main .container {
+    width: 90vw;
+  }
   body #main .welcome-section-container {
     width: 100%;
   }
@@ -73,17 +88,40 @@
   body #main .welcome-section-container .welcome-btn {
     margin-top: 2rem;
   }
+  body #main #about .container {
+    border: none;
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+    border-radius: 0;
+    width: 100%;
+  }
+  body #main #contact .contact .contact-list {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    justify-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body #main #contact .contact .contact-list .fcc {
+    margin-right: 6rem;
+  }
 }
 
 @media (max-width: 568px) {
-  body {
-    background-color: #58a4b0;
+  body #navbar {
+    position: absolute;
   }
   body #navbar .navbar-container {
-    -webkit-box-orient: horizontal;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -98,15 +136,36 @@
   }
   body #navbar .navbar-container-list {
     width: 100%;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   body #navbar .navbar-container-list-item {
-    margin-left: 5vw;
+    border-bottom: 4px solid #339e66;
+    margin: 10px 0;
+  }
+  body #navbar .navbar-container-list-item:hover {
+    border-color: white;
+    -webkit-transition: all 250ms ease-out;
+    transition: all 250ms ease-out;
   }
   body #navbar .navbar-container-list-item a {
-    font-size: 14px;
-    padding: 6px 5px;
+    border: none;
+    font-size: 16px;
+    padding: 8px;
+  }
+  body #navbar .navbar-container-list-item a:hover {
+    all: revert;
+    text-decoration: none;
+    position: relative;
+    font-weight: bold;
+  }
+  body #main {
+    width: 100%;
   }
   body #main .welcome-section-container {
     width: 100%;
@@ -118,6 +177,75 @@
     margin-top: 2rem;
     padding: 10px 15px;
   }
+  body #main #about .container {
+    width: 100%;
+  }
+  body #main #about .container p, body #main #about .container li {
+    font-size: 1.5vmax;
+  }
+  body #main #about .container .heading {
+    margin-top: 14vmax;
+  }
+  body #main #about .container .heading img {
+    z-index: 0;
+    background-size: 130% auto;
+    width: 18vmax;
+    height: 18vmax;
+    border-radius: 18vmax;
+  }
+  body #main #about .container .soft-skills {
+    margin-bottom: 7vmax;
+  }
+  body #main #about .container ul {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    text-align: start;
+    margin: 0;
+  }
+  body #main #about .container ul li {
+    margin-left: 15%;
+  }
+  body #main #projects .projects {
+    gap: 2rem;
+    -ms-grid-columns: (minmax 100px, 1fr)[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax 100px, 1fr);
+  }
+  body #main #projects .projects-div {
+    height: auto;
+    width: auto;
+  }
+  body #main #projects .projects-div a {
+    width: 22rem;
+    height: 15rem;
+  }
+  body #main #contact .contact .contact-list {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    justify-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body #main #contact .contact .contact-list .fcc {
+    margin-right: 6rem;
+  }
+}
+
+@media (max-width: 425px) {
+  body #main #about ul {
+    margin: 10px;
+  }
+  body #main #projects .projects-div a {
+    width: 18rem;
+    height: 13rem;
+  }
 }
 
 * {
@@ -127,13 +255,10 @@
           box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: auto;
-}
-
 body {
+  width: auto;
   text-align: center;
-  font-family: sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
   font-size: 1rem;
 }
 
@@ -186,8 +311,8 @@ h2, h3 {
   top: 0;
   left: 0;
   width: 100%;
+  height: auto;
   letter-spacing: 1.5px;
-  height: 7vh;
   z-index: 3;
 }
 
@@ -317,7 +442,7 @@ h2, h3 {
   margin: 0;
   font-size: 7vw;
   letter-spacing: 4px;
-  text-shadow: 5px 1px 1px #464440;
+  text-shadow: 5px 3px 1px #2a2b2d;
   text-align: center;
 }
 
@@ -381,6 +506,10 @@ h2, h3 {
   height: 90%;
 }
 
+#main #about .container p, #main #about .container li {
+  font-size: 1.2vmax;
+}
+
 #main #about .container .heading {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -390,15 +519,19 @@ h2, h3 {
           justify-content: center;
   z-index: 2;
   position: relative;
+  margin-top: 2rem;
 }
 
 #main #about .container .heading img {
-  background-size: 120% auto;
-  width: 12rem;
-  height: 12rem;
-  border-radius: 12rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-size: 100% auto;
+  width: 15vmax;
+  height: 15vmax;
+  border-radius: 15vmax;
   border: 5px solid black;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 #main #about .container .left {
@@ -414,12 +547,12 @@ h2, h3 {
   -webkit-column-gap: 10px;
           column-gap: 10px;
   text-align: left;
-  margin: 10px;
+  margin-bottom: 1rem;
 }
 
 #main #about ul li {
   list-style: inside;
-  margin-left: 100px;
+  margin-left: 50px;
   padding: 5px;
 }
 
@@ -436,7 +569,12 @@ h2, h3 {
           justify-content: center;
   background: #339e66;
   height: auto;
-  padding-top: 2rem;
+  width: auto;
+}
+
+#main #projects .container {
+  width: auto;
+  height: auto;
 }
 
 #main #projects h2 {
@@ -454,44 +592,22 @@ h2, h3 {
 #main #projects .projects {
   display: -ms-grid;
   display: grid;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  gap: 1rem;
+  grid-gap: 3rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   justify-items: center;
-  width: 1000;
+  width: 80%;
   height: auto;
   background: #339e66;
-  margin-bottom: 6em;
-}
-
-#main #projects .projects .first a {
-  background: url("https://codepen.io/vezaliy/pen/GRorbOa/image/small.png") center;
-  background-size: 120%;
-}
-
-#main #projects .projects .second a {
-  background: url("https://codepen.io/vezaliy/pen/vYLxNjP/image/small.png") center;
-  background-size: 120%;
-}
-
-#main #projects .projects .third a {
-  background: url("https://codepen.io/vezaliy/pen/wvMgmxM/image/small.png") center;
-  background-size: 120%;
-}
-
-#main #projects .projects .forth a {
-  background: url("https://codepen.io/vezaliy/pen/PobPJag/image/small.png") center;
-  background-size: 120%;
+  margin: 2rem auto 3rem auto;
 }
 
 #main #projects .projects-div {
-  margin: 20px;
-  height: 17rem;
-  width: 25rem;
+  height: auto;
+  width: auto;
 }
 
 #main #projects .projects-div a {
@@ -509,30 +625,20 @@ h2, h3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
+  width: 23rem;
+  height: 16rem;
   -webkit-transition: all 250ms ease-out;
   transition: all 250ms ease-out;
-  background: #43a2c2;
-  height: 17rem;
-  border: 5px solid black;
-  border-radius: 18px;
-  background: url("https://codepen.io/vezaliy/pen/GRorbOa/image/small.png");
-  background-size: 120%;
+  border: 5px solid #2a2b2d;
+  border-radius: 1.2rem;
 }
 
 #main #projects .projects-div a:hover {
+  border-color: black;
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
   -webkit-transition: all 250ms ease-out;
   transition: all 250ms ease-out;
-}
-
-#main #projects .projects-div a img {
-  width: auto;
-  height: 17rem;
-  opacity: 1;
-  max-width: 25rem;
-  min-height: 100%;
 }
 
 #main #projects .projects-div-overlay {
@@ -568,12 +674,32 @@ h2, h3 {
   opacity: 1;
 }
 
+#main #projects .projects .first a {
+  background: url("https://codepen.io/vezaliy/pen/GRorbOa/image/small.png") center;
+  background-size: 120%;
+}
+
+#main #projects .projects .second a {
+  background: url("https://codepen.io/vezaliy/pen/vYLxNjP/image/small.png") center;
+  background-size: 120%;
+}
+
+#main #projects .projects .third a {
+  background: url("https://codepen.io/vezaliy/pen/wvMgmxM/image/small.png") center;
+  background-size: 120%;
+}
+
+#main #projects .projects .forth a {
+  background: url("https://codepen.io/vezaliy/pen/PobPJag/image/small.png") center;
+  background-size: 120%;
+}
+
 #main #contact {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   background: #2a2b2d;
-  height: 50vh;
+  height: 50%;
   padding: 5em 1.5em;
 }
 
@@ -599,10 +725,10 @@ h2, h3 {
   display: -ms-grid;
   display: grid;
   row-gap: 40px;
-  -webkit-column-gap: 10p0x;
-          column-gap: 10p0x;
-  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
 }
 
 #main #contact .contact .contact-list .linkedin {
@@ -612,6 +738,10 @@ h2, h3 {
 #main #contact .contact .contact-list .github img {
   width: 150px;
   height: 7vh;
+}
+
+#main #contact .contact .contact-list .fcc {
+  margin-right: 6rem;
 }
 
 #main #contact .contact .contact-list .fcc img {
